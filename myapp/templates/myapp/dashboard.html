@@ -1,0 +1,234 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu for Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}"/>
+  
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-uX2XpwaSotX9gESRffT+JtG2Z5XlY9EEpgC7JQ6R6FpP2kXt6WrzJu5qz/OrLDiMYRccFgUcqGefjW0DAAmKbA==" crossorigin="anonymous" />
+
+
+
+  </head>
+  <body>
+
+    <nav class="sidebar">
+
+
+      <a href="#" class="logo">Extractor</a>
+
+      <div class="menu-content">
+        <ul class="menu-items">
+          <div class="menu-title">Menu</div>
+
+          <li class="item">
+            <a href="{% url 'myapp:base' %}">Dashboard</a>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Leads</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Leads
+              </div>
+              <li class="item">
+                <a href="{% url 'myapp:leads' %}">Lead Manager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Customers</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Customers
+              </div>
+              <!-- <li class="item">
+                <a href="#">Full User Manager</a>
+              </li> -->
+
+              <li class="item">
+                <a href="{% url 'myapp:customer' %}">Demo User Manager</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <a href="#">Resellers</a>
+          </li>
+
+          <li class="item">
+            <a href="#">Utilities</a>
+          </li>
+
+          <li class="item">
+            <a href="#">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+    <main class="main">
+        <header class="header">
+            <nav class="navigation">
+                <div>
+                    <input type="text" id="searchbox" placeholder="Search">
+                    <input type="text" id="reseller-panel" placeholder="Reseller Panel">
+                    <input type="text" id="aval-balance"placeholder="Available Balance:">
+                    <button type="button">Log Out</button>
+                </div>
+            </nav>
+        </header>
+        <h1>Dashboard</h1>
+        <div class="box-container-1">
+          <div class="box" id="text-1">
+            <p id="para1">Total Leads</p>
+            <p id="para2">Today Leads</p>
+            <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+          </div>
+
+          <div class="box" id="text-2">
+            <p id="para1">Total Full licence</p>
+            <p id="para2">Today Full licence</p>
+            <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+          </div>
+
+            <div class="box" id="text-3">
+              <p id="para1">Total Demo licence</p>
+              <p id="para2">Today Demo licence</p>
+              <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+            </div>
+            <div class="box" id="text-4">
+              <p id="para1">Total Reseller</p>
+              <p id="para2">Today Reseller</p>
+              <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+            </div>
+            
+          </div>
+          <div class="box-container-2">
+            <div class="box-2" id="text-5">
+              <p id="para1">Total Activity log</p>
+              <p id="para2">Today Activity log</p>
+              <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+            </div>
+
+            <div class="box-2" id="text-6">
+              <p id="para1">Total Feedback</p>
+              <p id="para2">Today Feedback</p>
+              <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+            </div>
+
+            <div class="box-2" id="text-7">
+              <p id="para1">Total Update logs</p>
+              <p id="para2">Today Update logs</p>
+              <div class="small-box" id="f1-small-box">0</div>
+            <div class="small-box" id="f2-small-box">0</div>
+            </div>
+
+            <div class="box-2" id="text-8">
+              <p id="para1">Total Product</p>
+              <div class="small-box" id="f1-small-box">0</div>
+          
+            </div>
+          </div>
+
+          <div class="box-container-3">
+            <div class="box-3">
+            <div class="box-4"><b>Admin Announcement</b></div>
+            <div class="rules-container">
+                <h2>Rules For Reseller</h2>
+                <div class="rules">
+                1. You have to sell a minimum of <span style="color: red;">licenses per month.</span><br>
+                2. If the minimum sales target is not met, your reseller account will be permanently deactivated.<br>
+                3. If the reseller panel is used only for personal purposes and not for selling, all activated licenses and the panel will be deactivated without notice.<br>
+                4. Do not share your reseller keys' price or any other information with anyone. Violation will result in deactivation of all activated licenses and the panel without notice.<br>
+                5. No full version keys will be deleted after creation. If you created keys in the panel, you have to pay for them.<br>
+                6. <span style="color: red;">We do not have a refund policy.</span><br>
+                7. Create full version keys with genuine<span style="color: red;">Name, Email & Mobile Number details.</span> Fake data will result in immediate deletion of the license.<br>
+                8. Create the reseller account with genuine<span style="color: red;"> Name, Email, Mobile Number details.</span> Fake data will result in immediate deactivation of the account and license.<br>
+                9. We don't provide any full version keys to resellers for customer demo purposes. You have to buy keys for customer demo purposes as well.<br>
+                10. Initially, we help you with support for your customers, but you have to learn it on your own and provide support for future needs.<br>
+                </div>
+            </div>
+        </div>
+      
+    </main>
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.querySelector(".sidebar");
+        const menu = document.querySelector(".menu-content");
+        const menuItems = document.querySelectorAll(".submenu-item");
+        const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+        const openPage = (pageName) => {
+          const baseUrl = window.location.origin;
+          const fullUrl = `${baseUrl}/${pageName}/`;
+          window.location.href = fullUrl;
+        };
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const target = item.dataset.target;
+
+            menu.classList.add("submenu-active");
+            item.classList.add("show-submenu");
+            menuItems.forEach((item2) => {
+              if (item !== item2) {
+                item2.classList.remove("show-submenu");
+              }
+            });
+
+            
+            if (target === "lead-manager") {
+              openPage("leads");
+            }
+
+            
+            if (target === "Demo User Manager") {
+              openPage("customer");
+            }
+
+          
+          });
+        });
+
+        subMenuTitles.forEach((title) => {
+          title.addEventListener("click", () => {
+            menu.classList.remove("submenu-active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

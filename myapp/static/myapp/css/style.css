@@ -1,0 +1,369 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  height: 60px;
+  color: light black;
+
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #11101d;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #11101d;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  /* background: #4070f4; */
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  /* background: #e7f2fd; */
+}
+.main h1 {
+    color: #11101d;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 400px;
+}
+
+
+/* ------------------------------------------------------------------------------------- nav- header ------------------------ */
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    margin-left: 260px;
+    height: 60px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+  
+
+  #reseller-panel {
+        margin-right: -6px;
+        margin-left: 475px;
+        text-align: center;
+        font-size: 16px;
+    
+  }
+  
+  #aval-balance {
+    margin-right: 20px;
+    text-align: center; 
+    font-size: 16px;
+  }
+  
+  
+  button {
+    margin-left: -28px;
+    width: 150px;
+    font-size: 16px;
+  }
+
+  #searchbox {
+    margin-left: 15px;
+    height: 30px;
+    width: 240px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------- box-container-1---------------------------------------------- */
+
+
+  /* Add this CSS to your existing styles or create a new CSS file */
+.box-container-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Optional: Align items vertically in the center */
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    /* background-color: #3498db; */ 
+    margin: 0 10px; 
+    border: 1px solid darkgray;
+    border-radius: 5px;
+  }
+  
+
+.main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    align-self: flex-start;
+    margin-bottom: 395px; 
+  }
+  
+  .box-container-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .box {
+    width: 300px;
+    height: 117px;
+    /* background-color: #3498db; */
+    margin-bottom: 777px;
+    border-radius: 5px;
+  }
+
+  .box #para1{
+    color: gray;
+    padding-left: 30px;
+    margin-top: 14px;
+    font-size: 15px;
+ }
+ .box #para2{
+  color: gray;
+  padding-left: 172px;
+  margin-top: -59px;
+  font-size: 15px;
+ }
+
+ #f1-small-box {
+  height: 30px;
+  width: 25px;
+  /* border: 2px solid red; */
+  border-radius: 7px;
+  margin-left: 45px;
+  margin-top: -15px;
+  padding: 8px;
+  padding-top: 3px;
+  color: white;
+  background-color: blue;
+ }
+
+ #f2-small-box {
+  height: 30px;
+  width: 25px;
+  /* border: 2px solid red; */
+  border-radius: 7px;
+  margin-left: 200px;
+  margin-top: -30px;
+  padding: 8px;
+  padding-top: 3px;
+  color: white;
+  background-color: green;
+ }
+  
+/* -------------------------------------------------------- box-container-2---------------------------------------------- */
+  .box-container-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  .box-2 {
+    width: 100px;
+    height: 100px;
+    /* background-color: #3498db; */
+    margin: 0 10px;
+    border: 1px solid darkgray;
+  }
+  
+
+.main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    align-self: flex-start;
+    margin-bottom: 20px; 
+  }
+  
+  .box-container-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .box-2 {
+    width: 300px;
+    height: 117px;
+    /* background-color: #3498db; */
+    margin-bottom: 652px;
+  }
+
+
+  .box-2 #para1{
+    color: gray;
+    padding-left: 20px;
+    margin-top: 14px;
+    font-size: 15px;
+ }
+ .box-2 #para2{
+  color: gray;
+  padding-left: 172px;
+  margin-top: -59px;
+  font-size: 15px;
+ }
+  /* ----------------------------------------------------------------------------.box-container-1----------------------------- */
+
+  .box-container-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .box-3 {
+    width: 79em;
+    height: 22.8em;
+    /* background-color: #3498db; */
+    margin-bottom: 225px;
+    border: 1px solid darkgray;
+  }
+
+  .box-4 {
+    width: 79em;
+    height: 60px;
+    border: 1px solid darkgray;
+    margin-top: -2px;
+    padding: 15px;
+  }
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+.rules-container,
+.rules {
+  line-height: 20px;
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+.rules-container .rules {
+  margin-left: 35px;
+  margin-top: -20px;
+}
+
+
+.rules-container h2 {
+  margin-top: 15px;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
